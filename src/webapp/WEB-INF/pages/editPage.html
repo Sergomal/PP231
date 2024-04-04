@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <title>EDIT</title>
+</head>
+<body>
+<h1>Edit user</h1>
+<form action="#" th:action="@{/edit}" th:object="${user}" th:method="patch">
+    <input type="hidden" th:field="*{id}" th:value="*{id}"/>
+    <p>NAME: <input type="text" th:field="*{name}" th:value="*{name}" th:charset="utf-8"/></p>
+    <p>SURNAME: <input type="text" th:field="*{surname}" th:value="*{surname}" th:charset="utf-8"/></p>
+    <p>EMAIL: <input type="text" th:field="*{email}" th:value="*{email}" th:charset="utf-8"/></p>
+    <p>PASSWORD: <input type="text" th:field="*{password}" th:value="*{password}" th:charset="utf-8"/></p>
+    <p><input type="submit" value="EDIT"/></p>
+</form>
+</body>
+</html>
